@@ -1,0 +1,34 @@
+class MyHashMap(object):
+
+    def __init__(self):
+        self.map = {}
+        
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: None
+        """
+        if key in self.map:
+            self.remove(key)
+        self.map[key] = value
+
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key in self.map:
+            return self.map[key]
+        else:
+            return -1
+
+    def remove(self, key):
+        """
+        :type key: int
+        :rtype: None
+        """
+        if key in self.map:
+            del self.map[key]
+        
